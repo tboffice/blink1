@@ -3,14 +3,5 @@
 # all blinl(1) turn off
 
 BLINK1_PATH=$(which blink1-tool)
+$BLINK1_PATH --id all --off
 
-# all off
-cnt=0
-while :
-do
-  echo count: $cnt
-  if ! $BLINK1_PATH -d $cnt --off  ; then
-    break
-  fi
-  cnt=$(($cnt+1))
-done
